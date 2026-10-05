@@ -14,7 +14,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: auto; }
+html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--ink); color: var(--paper); font-family: var(--sans); overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -110,13 +110,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .projects-heading { display: grid; grid-template-columns: 1fr 390px; gap: 70px; align-items: end; padding: 52px 0 70px; }
 .projects-heading p { color: rgba(242,240,232,.56); }
 .project-list { border-top: 1px solid rgba(242,240,232,.15); }
-.project-card { display: grid; grid-template-columns: 65px 1fr 170px; gap: 28px; padding: 34px 20px 34px 0; border-bottom: 1px solid rgba(242,240,232,.15); transition: background .25s, padding .25s; outline: none; }
-.project-card:hover, .project-card:focus-visible { background: #f7f7f5; color: var(--ink); padding-left: 20px; }
-.project-number { padding-top: 5px; color: rgba(242,240,232,.4); font: 10px var(--mono); }.project-card:hover .project-number, .project-card:focus-visible .project-number { color: var(--teal); }
+.project-card { display: grid; grid-template-columns: 65px 1fr 170px; gap: 28px; padding: 34px 20px; margin-inline: -20px; border-bottom: 1px solid rgba(242,240,232,.15); border-radius: 4px; outline: none; cursor: pointer; transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.project-card:hover, .project-card:focus-visible { background: #191919; border-color: rgba(242,240,232,.3); box-shadow: inset 3px 0 0 #f7f7f5; }
+.project-card:focus-visible { outline: 2px solid #f7f7f5; outline-offset: 4px; }
+.project-number { padding-top: 5px; color: rgba(242,240,232,.4); font: 10px var(--mono); transition: color .3s ease; }.project-card:hover .project-number, .project-card:focus-visible .project-number { color: var(--paper); }
 .project-title-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-.project-main h3 { margin: 0; font-size: 29px; letter-spacing: -.03em; }.project-main > p { max-width: 690px; margin: 14px 0 20px; color: rgba(242,240,232,.56); line-height: 1.6; transition: color .2s; }.project-card:hover .project-main > p, .project-card:focus-visible .project-main > p { color: rgba(17,17,17,.7); }
-.tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }.tags li { border: 1px solid rgba(242,240,232,.18); border-radius: 999px; padding: 6px 10px; font: 9px var(--mono); text-transform: uppercase; }.project-card:hover .tags li, .project-card:focus-visible .tags li { border-color: rgba(17,17,17,.3); }
-.project-details { align-self: center; display: grid; gap: 8px; color: rgba(242,240,232,.45); font: 9px var(--mono); text-transform: uppercase; }.project-card:hover .project-details, .project-card:focus-visible .project-details { color: rgba(17,17,17,.58); }
+.project-main h3 { margin: 0; font-size: 29px; letter-spacing: -.03em; }.project-main > p { max-width: 690px; margin: 14px 0 20px; color: rgba(242,240,232,.56); line-height: 1.6; transition: color .3s ease; }.project-card:hover .project-main > p, .project-card:focus-visible .project-main > p { color: rgba(242,240,232,.78); }
+.project-link-label { flex: 0 0 auto; padding: 6px 10px; border: 1px solid rgba(242,240,232,.22); border-radius: 999px; color: rgba(242,240,232,.58); font: 9px var(--mono); text-transform: uppercase; transition: color .3s ease, border-color .3s ease, background-color .3s ease; }
+.project-card:hover .project-link-label, .project-card:focus-visible .project-link-label { color: var(--ink); background: var(--paper); border-color: var(--paper); }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }.tags li { border: 1px solid rgba(242,240,232,.18); border-radius: 999px; padding: 6px 10px; font: 9px var(--mono); text-transform: uppercase; transition: border-color .3s ease, background-color .3s ease; }.project-card:hover .tags li, .project-card:focus-visible .tags li { border-color: rgba(242,240,232,.34); background: rgba(255,255,255,.025); }
+.project-details { align-self: center; display: grid; gap: 8px; color: rgba(242,240,232,.45); font: 9px var(--mono); text-transform: uppercase; transition: color .3s ease; }.project-card:hover .project-details, .project-card:focus-visible .project-details { color: rgba(242,240,232,.72); }
 
 .stack { padding-bottom: 140px; }
 .stack-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 75px; margin-top: 55px; }
@@ -139,6 +142,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .reveal { opacity: 0; transform: translateY(35px); transition: opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1); }
 .reveal.is-visible { opacity: 1; transform: none; }
+.project-card.reveal { transition: opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1), background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
 @keyframes pulse { 50% { opacity: .25; transform: scale(.7); } }
 
 @media (max-width: 980px) {
@@ -159,7 +163,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .about { padding: 85px 0 105px; }.section-label { padding-top: 70px; }
   .timeline-item { grid-template-columns: 58px 1fr; gap: 16px; }.timeline-meta { grid-column: 2; grid-row: 1; }.timeline-body { grid-column: 2; }.timeline-marker { width: 48px; height: 48px; }.timeline-body h3 { font-size: 23px; }
   .projects { padding-bottom: 90px; }.projects-heading { padding-bottom: 45px; }
-  .project-card { grid-template-columns: 40px 1fr; }.project-details { display: none; }.project-main h3 { font-size: 23px; }
+  .project-card { grid-template-columns: 40px 1fr; margin-inline: -8px; padding-inline: 8px; }.project-details { display: none; }.project-main h3 { font-size: 23px; }.project-link-label { display: none; }
   .stack { padding-bottom: 90px; }.skills-grid { grid-template-columns: 1fr; }.skill-education { grid-column: auto; }.skill-education span { position: static; display: block; margin-top: 15px; }
   .contact { width: 100%; padding: 64px 24px; margin: 0; }.contact h2 { font-size: clamp(44px, 13vw, 65px); }.contact-decoration { right: -270px; }
   .contact-actions { align-items: stretch; flex-direction: column; }.contact-actions .button { width: 100%; }

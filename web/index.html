@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Портфолио Дениса Ли, Go backend-разработчика из Астаны.">
+  <meta name="theme-color" content="#111111">
+  <title>Denis Li — Go Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/assets/styles.css?v=6">
+  <script defer src="/assets/app.js?v=2"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">К содержимому</a>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <nav aria-label="Основная навигация">
+      <a href="#about" data-i18n="navAbout">Обо мне</a><a href="#experience" data-i18n="navExperience">Опыт</a><a href="#stack" data-i18n="navStack">Стек</a><a href="#projects" data-i18n="navProjects">Проекты</a><a href="#contact" data-i18n="navContact">Контакты</a>
+    </nav>
+    <div class="header-actions"><button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English">EN</button><a class="header-github" href="https://github.com/fallendwn" target="_blank" rel="noreferrer">GitHub · fallendwn</a><a class="header-cta" href="/resume.pdf" download data-i18n="resume">Резюме</a></div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="availability">Открыт к предложениям на junior backend-позиции</span></p>
+        <h1 id="hero-title" data-i18n-html="heroTitle">Создаю системы,<br><span>которые работают за кадром.</span></h1>
+        <p class="hero-intro" data-i18n="heroIntro">Go backend-разработчик. Создаю надёжные API, понятную бизнес-логику и сервисы, устойчивые под нагрузкой.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#stack" data-i18n="explore">Посмотреть мой стек</a><a class="button button-ghost" href="https://t.me/leeeedenis" target="_blank" rel="noreferrer" data-i18n="talk">Связаться в Telegram</a></div>
+        <dl class="quick-facts" aria-label="Краткая информация"><div><dt data-i18n="basedIn">Город</dt><dd data-i18n="location">Астана, Казахстан</dd></div><div><dt data-i18n="coreLanguage">Основной язык</dt><dd>Go</dd></div><div><dt data-i18n="focus">Фокус</dt><dd data-i18n="focusValue">API и сервисы</dd></div></dl>
+      </div>
+      <div class="hero-visual" aria-label="Схема backend-системы">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="service-card service-main"><span class="service-icon">go</span><div><small data-i18n="coreService">основной сервис</small><strong>API Gateway</strong></div><i class="live-dot"></i></div>
+        <div class="service-card service-db"><span>DB</span><small>PostgreSQL</small></div><div class="service-card service-cache"><span>R</span><small>Redis</small></div><div class="service-card service-events"><span>→</span><small>NATS events</small></div>
+        <div class="code-panel" aria-hidden="true"><div><i></i><i></i><i></i></div><code><b>GET</b> /api/v1/profile</code><code><em>200</em> 12ms</code></div>
+      </div>
+    </section>
+
+    <section class="about section-shell reveal" id="about" aria-labelledby="about-title">
+      <div class="section-label"><span>01</span><span data-i18n="aboutLabel">Обо мне</span></div>
+      <div class="about-grid"><h2 id="about-title" data-i18n-html="aboutTitle">Превращаю бизнес-правила в <span>понятный и надёжный код.</span></h2><div class="about-copy"><p data-i18n="aboutP1">Я junior backend-разработчик с практическим опытом разработки и поддержки сервисов на Go. Уделяю внимание предсказуемым API, безопасным транзакциям, авторизации и наблюдаемости.</p><p data-i18n="aboutP2">Работал с REST и gRPC, PostgreSQL, кешированием в Redis, событийным взаимодействием и контейнеризацией.</p><a class="text-link" href="#experience" data-i18n="aboutLink">Посмотреть опыт</a></div></div>
+    </section>
+
+    <section class="experience section-shell" id="experience" aria-labelledby="experience-title">
+      <div class="section-label reveal"><span>02</span><span data-i18n="experienceLabel">Опыт</span></div>
+      <div class="section-heading reveal"><h2 id="experience-title" data-i18n="experienceTitle">Учусь, создавая реальные продукты.</h2><p data-i18n="experienceIntro">Практический опыт backend-разработки, интеграций, тестирования и процессов поставки.</p></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-marker"><span>NC</span></div><div class="timeline-meta"><p data-i18n="period">Июнь — август 2026</p><small data-i18n="location">Астана, Казахстан</small></div><div class="timeline-body"><p class="company">NomadCodes</p><h3 data-i18n="internRole">Стажёр Go Backend</h3><ul><li data-i18n="nc1">Разрабатывал и поддерживал сервисы на Go, Gin, PostgreSQL и GORM.</li><li data-i18n="nc2">Реализовывал REST API, валидацию, транзакции и операции с базой данных.</li><li data-i18n="nc3">Улучшал ролевую модель доступа и логику авторизации.</li><li data-i18n="nc4">Работал с Docker, Linux и CI/CD-процессами.</li></ul></div></article>
+        <article class="timeline-item reveal"><div class="timeline-marker marker-alt"><span>AG</span></div><div class="timeline-meta"><p data-i18n="period">Июнь — август 2026</p><small data-i18n="location">Астана, Казахстан</small></div><div class="timeline-body"><p class="company">Aira Group</p><h3 data-i18n="internRole">Стажёр Go Backend</h3><ul><li data-i18n="ag1">Разрабатывал backend-функциональность на Go и интегрировал внешние сервисы.</li><li data-i18n="ag2">Находил и исправлял ошибки, влияющие на стабильность сервисов.</li><li data-i18n="ag3">Проводил сквозное тестирование API для разных сценариев.</li></ul></div></article>
+      </div>
+    </section>
+
+    <section class="stack section-shell" id="stack" aria-labelledby="stack-title">
+      <div class="section-label reveal"><span>03</span><span data-i18n="stackLabel">Технологии</span></div>
+      <div class="stack-grid"><div class="stack-heading reveal"><h2 id="stack-title" data-i18n-html="stackTitle">Основной стек — Go. <span>Инструменты — на весь цикл разработки.</span></h2></div><div class="skills-grid">
+        <article class="skill-card reveal"><div class="skill-icon">{ }</div><h3>Backend</h3><p>Gin · REST · gRPC · JWT · GORM · pgx</p></article>
+        <article class="skill-card reveal"><div class="skill-icon">▱</div><h3 data-i18n="data">Data</h3><p>PostgreSQL · MongoDB · Redis</p></article>
+        <article class="skill-card reveal"><div class="skill-icon">⇄</div><h3 data-i18n="messaging">Messaging</h3><p data-i18n="messagingValue">NATS · RabbitMQ · событийные потоки</p></article>
+        <article class="skill-card reveal"><div class="skill-icon">◉</div><h3 data-i18n="delivery">Delivery</h3><p>Docker · Linux · GitHub Actions · CI/CD</p></article>
+        <article class="skill-card reveal"><div class="skill-icon">⌁</div><h3 data-i18n="observability">Observability</h3><p>Prometheus · Grafana · OpenTelemetry</p></article>
+        <article class="skill-card skill-education reveal"><small data-i18n="education">Образование</small><h3>Astana IT University</h3><p data-i18n="degree">Бакалавриат, программная инженерия</p><span>2024 — 2027</span></article>
+      </div></div>
+    </section>
+
+    <section class="projects" id="projects" aria-labelledby="projects-title"><div class="section-shell">
+      <div class="section-label reveal"><span>04</span><span data-i18n="projectsLabel">Проекты</span></div><div class="projects-heading reveal"><h2 id="projects-title" data-i18n="projectsTitle">Системы для реальных задач.</h2><p data-i18n="projectsIntro">Три backend-проекта: распределённые сервисы, транзакции и бизнес-логика.</p></div>
+      <div class="project-list">
+        <article class="project-card reveal" tabindex="0"><div class="project-number">01</div><div class="project-main"><div class="project-title-row"><h3>Social Network Backend</h3></div><p data-i18n="project1">Микросервисы для аутентификации, управления пользователями и уведомлений с синхронным и событийным взаимодействием.</p><ul class="tags" aria-label="Стек"><li>Go</li><li>gRPC</li><li>Redis</li><li>NATS</li><li>MongoDB</li></ul></div><div class="project-details"><span data-i18n="microservices">Микросервисы</span><span data-i18n="cache">Инвалидация кеша</span><span>JWT auth</span></div></article>
+        <article class="project-card reveal" tabindex="0"><div class="project-number">02</div><div class="project-main"><div class="project-title-row"><h3>Shipping Service</h3></div><p data-i18n="project2">Логистический backend для управления отправлениями, доставками, операциями и отслеживанием.</p><ul class="tags" aria-label="Стек"><li>Go</li><li>PostgreSQL</li><li>REST</li><li>Logistics</li></ul></div><div class="project-details"><span>REST API</span><span data-i18n="dataModeling">Моделирование данных</span><span data-i18n="tracking">Отслеживание</span></div></article>
+        <article class="project-card reveal" tabindex="0"><div class="project-number">03</div><div class="project-main"><div class="project-title-row"><h3>Betting Platform Backend</h3></div><p data-i18n="project3">Сервисы для ставок, кошельков, событий и исходов с авторизацией и безопасными транзакциями.</p><ul class="tags" aria-label="Стек"><li>Go</li><li>Gin</li><li>PostgreSQL</li><li>GORM</li></ul></div><div class="project-details"><span data-i18n="transactions">Транзакции</span><span data-i18n="wallet">Логика кошелька</span><span data-i18n="validation">Валидация</span></div></article>
+      </div>
+    </div></section>
+
+    <section class="contact section-shell reveal" id="contact" aria-labelledby="contact-title"><p class="eyebrow" data-i18n="contactEyebrow">Буду рад обсудить задачи</p><h2 id="contact-title" data-i18n-html="contactTitle">Есть backend-задача,<br>которую стоит решить?</h2><p class="contact-copy" data-i18n="contactCopy">Рассматриваю junior Go backend-позиции, стажировки и интересные проекты.</p><div class="contact-actions"><a class="button button-light" href="https://t.me/leeeedenis" target="_blank" rel="noreferrer">Telegram · @leeeedenis</a><a class="button button-outline-light" href="tel:+77086550950">+7 708 655 09 50</a><a class="button button-outline-light" href="https://github.com/fallendwn" target="_blank" rel="noreferrer">GitHub · fallendwn</a></div><div class="contact-decoration" aria-hidden="true"><span>GO</span></div></section>
+  </main>
+  <footer class="site-footer section-shell"><a href="#top" data-i18n="backToTop">Наверх</a></footer>
+</body>
+</html>

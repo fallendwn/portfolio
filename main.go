@@ -58,6 +58,7 @@ func profile() Profile {
 			{Name: "Social Network Backend", Description: "Microservices for authentication, user management, and notifications.", Stack: []string{"Go", "gRPC", "Redis", "NATS", "MongoDB"}, Highlights: []string{"gRPC communication between services", "Asynchronous event workflows with NATS", "Redis caching with invalidation", "JWT authentication and verification flows"}},
 			{Name: "Shipping Service", Description: "A backend service for logistics, shipment processing, and delivery tracking.", Stack: []string{"Go", "PostgreSQL", "REST"}, Highlights: []string{"Shipment and delivery REST APIs", "Business rules for shipping operations", "Tracking-focused data flows"}},
 			{Name: "Betting Platform Backend", Description: "Transactional services for betting, wallets, events, and outcomes.", Stack: []string{"Go", "Gin", "PostgreSQL", "GORM"}, Highlights: []string{"Transactional wallet and betting workflows", "Authenticated and validated REST APIs", "Structured domain business logic"}},
+			{Name: "Silent Room", Description: "An anonymous platform for sharing short notes and confessions.", Stack: []string{"Go", "PostgreSQL", "REST"}, Highlights: []string{"Anonymous publishing flows", "Password hashing with unique salts", "Privacy-focused content handling"}},
 		},
 		Skills: map[string][]string{
 			"Languages":     {"Go", "SQL", "JavaScript", "Java"},
